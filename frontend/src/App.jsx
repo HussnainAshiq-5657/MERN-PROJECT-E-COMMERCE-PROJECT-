@@ -1,7 +1,9 @@
+import AppRoutes from './AppRoutes';
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl text-red-500 font-bold">Muhammad</h1>
+      <AppRoutes />
     </>
   );
 }

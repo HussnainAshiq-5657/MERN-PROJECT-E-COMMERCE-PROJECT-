@@ -1,9 +1,13 @@
-import React from 'react';
+import Header from '../components/header/header.jsx';
+import { Outlet } from 'react-router';
+import Footer from '../components/footer/footer.jsx';
 
 function MainLayout() {
   return (
     <>
-      <h1 className="text-3xl text-red-500 font-bold">Home Component</h1>
+      <Header />
+      <Outlet />
+      <Footer />
     </>
   );
 }

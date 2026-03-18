@@ -9,7 +9,7 @@ export const fetchProducts = createAsyncThunk('/fetchProducts', async () => {
 const ProductAPI = createSlice({
   name: 'ProductAPI',
   initialState: {
-    item: [],
+    items: [],
     loading: false,
     error: null,
   },
@@ -20,7 +20,7 @@ const ProductAPI = createSlice({
     });
 
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
-      state.item = action.payload;
+      state.items = action.payload;
       state.loading = false;
     });
 
