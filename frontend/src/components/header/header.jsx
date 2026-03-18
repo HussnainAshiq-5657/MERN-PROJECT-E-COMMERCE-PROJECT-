@@ -4,6 +4,10 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { GiCrossedBones } from 'react-icons/gi';
 import DeskTopMenu from './DeskTopMenu';
 import MobileMenu from './MobileMenu';
+import SearchInput from './SearchInput';
+import WishList from './WishList';
+import Cart from './Cart';
+import Login from './Login';
 
 function Header() {
   const [open, setOpen] = useState();
@@ -15,9 +19,19 @@ function Header() {
             <h1 className="text-2xl font-bold">Baroque</h1>
           </NavLink>
           <DeskTopMenu />
+          <div className='flex flex-row items-center gap-3 '>
+            <SearchInput />
+            <WishList />
+            <Cart />
+            <Login />
+          </div>
           <div className="md:hidden flex items-center">
-            <button className="text-2xl font-bold" onClick={()=>setOpen(!open)}>
-              {open ? <GiCrossedBones className='text-red-500' /> : <GiHamburgerMenu className='text-blue-500' />}
+            <button className="text-2xl font-bold" onClick={() => setOpen(!open)}>
+              {open ? (
+                <GiCrossedBones className="text-red-500" />
+              ) : (
+                <GiHamburgerMenu className="text-blue-500" />
+              )}
             </button>
           </div>
         </div>
