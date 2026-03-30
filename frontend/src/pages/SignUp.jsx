@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Home() {
+function SignUp() {
   return (
     <>
     <h1 className="text-3xl text-red-500 font-bold">SignUp Component</h1>
@@ -8,4 +8,4 @@ function Home() {
   )
 }
 
-export default Home
+export default SignUp

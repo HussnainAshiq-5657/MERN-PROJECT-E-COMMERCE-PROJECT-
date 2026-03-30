@@ -16,7 +16,7 @@ function HeaderData() {
             <NavLink
               to={items.link}
               className={({ isActive }) =>
-                `px-4 py-2 font-semibold text-lg  ${isActive ? 'text-red-500' : 'text-blue-700'}`
+                `px-4 py-2 text-lg  ${isActive ? 'text-black font-semibold underline underline-offset-6' : 'text-gray-500 hover:underline hover:underline-offset-6'}`
               }
             >
               {items.name}

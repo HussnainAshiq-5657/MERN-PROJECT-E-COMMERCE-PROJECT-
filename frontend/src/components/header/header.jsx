@@ -16,7 +16,7 @@ function Header() {
       <header className="bg-gray-200 shadow-2xs shadow-gray-400">
         <div className="flex justify-between items-center p-2">
           <NavLink to="/">
-            <h1 className="text-2xl font-bold">Baroque</h1>
+            <h1 className="text-2xl font-bold">CartBridge</h1>
           </NavLink>
           <DeskTopMenu />
           <div className='flex flex-row items-center gap-3 '>

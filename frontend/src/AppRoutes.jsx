@@ -4,7 +4,7 @@ import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import SignUp from './pages/SignUp.jsx';
 import MainLayout from './layout/MainLayout';
-
+import NotFound from './pages/NotFound.jsx';
 
 function AppRoutes() {
   return (
@@ -17,6 +17,7 @@ function AppRoutes() {
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/wishList" element={<About />} />
           <Route path="/cartOrder" element={<Contact />} />
+          <Route path="/*" element={<NotFound />} />
         </Route>
       </Routes>
     </>

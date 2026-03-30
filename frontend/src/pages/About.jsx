@@ -1,4 +1,4 @@
-function Home() {
+function About() {
   return (
     <>
       <h1 className="text-3xl text-red-500 font-bold">About Component</h1>
@@ -6,4 +6,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default About;
