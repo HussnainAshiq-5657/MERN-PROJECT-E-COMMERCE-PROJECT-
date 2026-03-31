@@ -2,6 +2,7 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import { IoCallOutline } from 'react-icons/io5';
 import { MdOutlineEmail } from 'react-icons/md';
+import Button from '../components/button/button';
 
 function Contact() {
   return (
@@ -11,7 +12,7 @@ function Contact() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
               <div className="bg-red-500 rounded-full p-2">
-                <IoCallOutline className="text-white text-xl" />
+                <IoCallOutline className="text-white text-xl cursor-pointer" />
               </div>
               <h1 className="font-semibold text-lg">Call To Us</h1>
             </div>
@@ -24,7 +25,7 @@ function Contact() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
               <div className="bg-red-500 rounded-full p-2">
-                <MdOutlineEmail className="text-white text-xl" />
+                <MdOutlineEmail className="text-white text-xl cursor-pointer" />
               </div>
               <h1 className="font-semibold text-lg">Write To Us</h1>
             </div>
@@ -35,9 +36,13 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="w-full p-6 border-2">
+        <div className="w-full p-6 border-2 rounded-lg">
           <Formik
-            initialValues={{}}
+            initialValues={{
+              FullName: '',
+              Email: '',
+              Number: '',
+            }}
             validateSchema={yup.object({})}
             onSubmit={(values) => {
               alert('Your Record is Saved');
@@ -45,11 +50,36 @@ function Contact() {
           >
             {({ values, error, touched, handleSubmit, handleBlur, handleChange }) => (
               <div>
-                <form action="" onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-3">
-                    <input type="text" placeholder="Your Name" name="FullName" />
-                    <input type="text" placeholder="Your Email" name="Email" />
-                    <input type="text" placeholder="Your Phone Number" name="Number" />
+                <form action="" onSubmit={handleSubmit} className="flex flex-col gap-10 ">
+                  <div className="grid grid-cols-3 gap-6">
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      name="FullName"
+                      className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Your Email"
+                      name="Email"
+                      className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Your Phone Number"
+                      name="Number"
+                      className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
+                    />
+                  </div>
+                  <textarea
+                    name="Message"
+                    rows={8}
+                    id=""
+                    placeholder="Your Message"
+                    className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
+                  ></textarea>
+                  <div className="flex justify-end">
+                    <Button text={'Send Message'} />
                   </div>
                 </form>
               </div>
