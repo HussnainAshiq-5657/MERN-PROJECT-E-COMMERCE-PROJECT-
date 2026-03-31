@@ -28,9 +28,16 @@ function Services() {
       <div className="flex justify-center gap-12 my-15">
         {AboutServices.map((services) => (
           <div key={services.id}>
-            <div>{services.icon}</div>
-            <h3>{services.title}</h3>
-            <p>{services.description}</p>
+            <div className="flex justify-center items-center">
+              <div className="bg-gray-300 p-3 rounded-full">
+                <div className="bg-black p-3 rounded-full">
+                  <span className="text-white text-2xl cursor-pointer">{services.icon}</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-center font-bold text-lg mt-2">{services.title}</h3>
+            <p className="text-center">{services.description}</p>
           </div>
         ))}
       </div>

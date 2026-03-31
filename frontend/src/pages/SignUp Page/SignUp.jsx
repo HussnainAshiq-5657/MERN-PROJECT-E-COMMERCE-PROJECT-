@@ -9,7 +9,7 @@ function SignUp() {
     <>
       <div className="flex justify-between items-center gap-6 my-20 px-10">
         <div className="w-3/5">
-          <img className="w-full h-full object-cover rounded-xl" src={SignUpPagePhoto} alt="" />
+          <img className="w-full object-cover rounded-xl" src={SignUpPagePhoto} alt="Picture of the sign-up page" />
         </div>
 
         <div className="w-2/5 px-10">
