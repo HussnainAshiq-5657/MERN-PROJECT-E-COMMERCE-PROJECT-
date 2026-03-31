@@ -32,8 +32,8 @@ function Login() {
             {({ handleSubmit, handleBlur, handleChange, values, errors, touched }) => (
               <form onSubmit={handleSubmit}>
                 <div className="my-4">
-                  <h1 className="font-bold text-2xl">Log in to Exclusive</h1>
-                  <p className="text-md">Enter your details below</p>
+                  <h1 className="font-bold text-4xl my-4">Log in to Exclusive</h1>
+                  <p className="text-lg">Enter your details below</p>
                 </div>
 
                 <div className="flex flex-col gap-6">
@@ -69,7 +69,7 @@ function Login() {
                   <div className="flex justify-between items-center">
                     <NavLink
                       to="/signUp"
-                      className="bg-red-500 text-white py-2 font-bold cursor-pointer px-4 rounded-lg"
+                      className="bg-red-500 hover:bg-red-700 text-white py-2 font-bold cursor-pointer px-4 rounded-lg"
                     >
                       Log In
                     </NavLink>

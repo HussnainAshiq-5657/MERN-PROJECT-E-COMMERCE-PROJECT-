@@ -32,8 +32,8 @@ function SignUp() {
             {({ handleSubmit, handleBlur, handleChange, values, errors, touched }) => (
               <form onSubmit={handleSubmit}>
                 <div className="my-4">
-                  <h1 className="font-bold text-2xl">Create an Account</h1>
-                  <p className="text-md">Enter your details below</p>
+                  <h1 className="font-bold text-4xl my-4">Create an Account</h1>
+                  <p className="text-lg">Enter your details below</p>
                 </div>
 
                 <div className="flex flex-col gap-6">
@@ -88,7 +88,12 @@ function SignUp() {
                   />
                   <p className="text-center">
                     Already have an Account?{' '}
-                    <NavLink to="/loginUser" className="cursor-pointer underline underline-offset-6">Log In</NavLink>
+                    <NavLink
+                      to="/loginUser"
+                      className="cursor-pointer underline underline-offset-6"
+                    >
+                      Log In
+                    </NavLink>
                   </p>
                 </div>
               </form>
