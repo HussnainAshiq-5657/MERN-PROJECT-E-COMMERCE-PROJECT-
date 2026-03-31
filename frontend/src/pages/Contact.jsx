@@ -79,7 +79,7 @@ function Contact() {
                     className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
                   ></textarea>
                   <div className="flex justify-end">
-                    <Button text={'Send Message'} />
+                    <Button text={'Send Message'} className="bg-red-500 hover:bg-red-700" />
                   </div>
                 </form>
               </div>

@@ -4,7 +4,7 @@ import SignUpPagePhoto from '../assets/SignUp Page Photo.jpg';
 import Button from '../components/button/button.jsx';
 import { NavLink } from 'react-router';
 
-function SignUp() {
+function Login() {
   return (
     <>
       <div className="flex justify-between items-center gap-6 my-20 px-10">
@@ -32,26 +32,11 @@ function SignUp() {
             {({ handleSubmit, handleBlur, handleChange, values, errors, touched }) => (
               <form onSubmit={handleSubmit}>
                 <div className="my-4">
-                  <h1 className="font-bold text-2xl">Create an Account</h1>
+                  <h1 className="font-bold text-2xl">Log in to Exclusive</h1>
                   <p className="text-md">Enter your details below</p>
                 </div>
 
                 <div className="flex flex-col gap-6">
-                  <div>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Name"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.name}
-                      className="border-b border-b-red-400 focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
-                    />
-                    {touched.name && errors.name && (
-                      <p className="text-red-500 text-sm">{errors.name}</p>
-                    )}
-                  </div>
-
                   <div>
                     <input
                       type="email"
@@ -81,15 +66,15 @@ function SignUp() {
                       <p className="text-red-500 text-sm">{errors.password}</p>
                     )}
                   </div>
-                  <Button text={'Create Account'} className=" bg-red-500 hover:bg-red-700" />
-                  <Button
-                    text={'Sign up with Google'}
-                    className="bg-gray-500 hover:bg-gray-700 text-black"
-                  />
-                  <p className="text-center">
-                    Already have an Account?{' '}
-                    <NavLink to="/loginUser" className="cursor-pointer underline underline-offset-6">Log In</NavLink>
-                  </p>
+                  <div className="flex justify-between items-center">
+                    <NavLink
+                      to="/signUp"
+                      className="bg-red-500 text-white py-2 font-bold cursor-pointer px-4 rounded-lg"
+                    >
+                      Log In
+                    </NavLink>
+                    <p className="text-red-500">Forgot Password?</p>
+                  </div>
                 </div>
               </form>
             )}
@@ -100,4 +85,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Login;
