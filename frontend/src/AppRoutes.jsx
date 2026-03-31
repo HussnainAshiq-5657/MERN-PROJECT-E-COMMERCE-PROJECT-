@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router';
 import Home from './pages/Home.jsx';
-import About from './pages/About.jsx';
+import About from './pages/About Page/About.jsx';
 import Contact from './pages/Contact.jsx';
-import SignUp from './pages/SignUp.jsx';
+import SignUp from './pages/SignUp Page/SignUp.jsx';
 import MainLayout from './layout/MainLayout';
 import NotFound from './pages/NotFound.jsx';
-import Login from './pages/LoginUser.jsx';
+import Login from './pages/SignUp Page/LoginUser.jsx';
 
 function AppRoutes() {
   return (

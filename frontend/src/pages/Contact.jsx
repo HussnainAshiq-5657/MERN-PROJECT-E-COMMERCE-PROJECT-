@@ -8,7 +8,7 @@ function Contact() {
   return (
     <>
       <div className="flex flex-row gap-10 justify-between w-4/5 mx-auto my-20">
-        <div className="bg-white shadow-2xs shadow-gray-300 rounded-lg p-10 border-2 w-2/5">
+        <div className="bg-white shadow-2xs shadow-gray-300 rounded-lg p-10 border-2 border-gray-300 w-2/5">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
               <div className="bg-red-500 rounded-full p-2">
@@ -36,48 +36,98 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="w-full p-6 border-2 rounded-lg">
+        <div className="w-full px-8 py-6 border-2 border-gray-300 rounded-lg">
           <Formik
             initialValues={{
               FullName: '',
               Email: '',
               Number: '',
+              Message: '',
             }}
-            validateSchema={yup.object({})}
+            validationSchema={yup.object({
+              FullName: yup
+                .string()
+                .required('Full Name is Required')
+                .min(6, 'FullName Must be at Least 6 Characters')
+                .max(20, 'FullName Must be at Most 20 Character.'),
+              Email: yup.string().required('Email is Required').email('Invalid Email Address'),
+              Number: yup
+                .string()
+                .required('Phone Number is Required')
+                .matches(/^[0-9]+$/, 'Phone Number must be only Digits.')
+                .max(11, 'Phone Number Must be at Least 11 Digits.'),
+              Message: yup
+                .string()
+                .required('Message is Required')
+                .min(10, 'Message Must be at Least 10 Characters.')
+                .max(300, 'Message Must be at Most 300 Characters.'),
+            })}
             onSubmit={(values) => {
               alert('Your Record is Saved');
             }}
           >
-            {({ values, error, touched, handleSubmit, handleBlur, handleChange }) => (
+            {({ values, errors, touched, handleSubmit, handleBlur, handleChange }) => (
               <div>
-                <form action="" onSubmit={handleSubmit} className="flex flex-col gap-10 ">
+                <form action="" onSubmit={handleSubmit} className="flex flex-col gap-6 ">
                   <div className="grid grid-cols-3 gap-6">
-                    <input
-                      type="text"
-                      placeholder="Your Name"
-                      name="FullName"
-                      className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Your Email"
-                      name="Email"
-                      className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Your Phone Number"
-                      name="Number"
-                      className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
-                    />
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Your Name"
+                        name="FullName"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.FullName}
+                        className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
+                      />
+                      {touched.FullName && errors.FullName && (
+                        <p className="text-red-500 text-sm mt-1">{errors.FullName}</p>
+                      )}
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Your Email"
+                        name="Email"
+                        value={values.Email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
+                      />
+                      {touched.Email && errors.Email && (
+                        <p className="text-red-500 text-sm mt-1">{errors.Email}</p>
+                      )}
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Your Phone Number"
+                        name="Number"
+                        value={values.Number}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
+                      />
+                      {touched.Number && errors.Number && (
+                        <p className="text-red-500 text-sm mt-1">{errors.Number}</p>
+                      )}
+                    </div>
                   </div>
-                  <textarea
-                    name="Message"
-                    rows={8}
-                    id=""
-                    placeholder="Your Message"
-                    className="outline-none border-2 border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-red-500 focus:border-none"
-                  ></textarea>
+                  <div>
+                    <textarea
+                      name="Message"
+                      rows={8}
+                      cols={91}
+                      value={values.Message}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="Your Message"
+                      className="outline-none border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-none p-4"
+                    ></textarea>
+                    {touched.Message && errors.Message && (
+                      <p className="text-red-500 text-sm mt-1">{errors.Message}</p>
+                    )}
+                  </div>
                   <div className="flex justify-end">
                     <Button text={'Send Message'} className="bg-red-500 hover:bg-red-700" />
                   </div>
