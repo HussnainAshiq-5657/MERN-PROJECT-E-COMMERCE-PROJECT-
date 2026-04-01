@@ -1,17 +1,8 @@
 import Services from './Services';
 import WomenPhoto from '../../assets/Women.jpg';
+import SellerActivity from './SellerActivity';
+import CarouselEffect from './CarouselEffect';
 function About() {
-  const SellerActivity = [
-    {
-      id: 0,
-    },
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-  ];
   return (
     <>
       {/* Photos and Description */}
@@ -37,7 +28,17 @@ function About() {
           />
         </div>
       </div>
+
+      {/* Seller Activity */}
+
+      <SellerActivity />
+
+      {/*Carousel Effect */}
+
+      <CarouselEffect />
+
       {/* Summary of Services */}
+
       <Services />
     </>
   );

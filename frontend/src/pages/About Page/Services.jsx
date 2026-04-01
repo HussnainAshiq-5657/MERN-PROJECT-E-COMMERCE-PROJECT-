@@ -25,7 +25,7 @@ function Services() {
   ];
   return (
     <>
-      <div className="flex justify-center gap-12 my-15">
+      <div className="flex justify-center gap-20 my-20">
         {AboutServices.map((services) => (
           <div key={services.id}>
             <div className="flex justify-center items-center">
