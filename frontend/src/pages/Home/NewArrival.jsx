@@ -6,7 +6,7 @@ import Gucci from '../../Images/Gucci.png';
 function NewArrival() {
   return (
     <>
-      <div className="w-4/5 mx-auto my-20 flex gap-10">
+      <div className="w-4/5 mx-auto my-20 flex justify-center gap-10">
         {/* PlayStation */}
         <div className="w-1/2 bg-black text-white p-10 rounded-xl">
           <div
@@ -44,7 +44,7 @@ function NewArrival() {
           <div className="flex flex-row gap-4">
             <div className="bg-black p-6 text-white rounded-lg">
               <div
-                className="bg-contain bg-center bg-no-repeat h-40 flex items-end"
+                className="bg-contain bg-right bg-no-repeat h-40 flex items-end"
                 style={{ backgroundImage: `url(${Speaker})` }}
               >
                 <div className="flex flex-col gap-2 w-3/4 p-4 ">
@@ -58,7 +58,7 @@ function NewArrival() {
             </div>
             <div className="bg-black p-6 text-white rounded-lg">
               <div
-                className="bg-contain bg-center bg-no-repeat h-40 flex items-end"
+                className="bg-contain bg-right bg-no-repeat h-40 flex items-end"
                 style={{ backgroundImage: `url(${Gucci})` }}
               >
                 <div className="flex flex-col gap-2 w-3/4 p-4 ">
