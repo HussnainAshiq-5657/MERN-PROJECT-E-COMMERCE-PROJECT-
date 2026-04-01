@@ -20,7 +20,7 @@ function SignUp() {
               password: '',
             }}
             validationSchema={yup.object({
-              name: yup.string().required('Name is required'),
+              name: yup.string().required('Name is required').min(5,'Minimum 5 Characters Required'),
               email: yup.string().email('Invalid email').required('Email is required'),
               password: yup.string().min(6, 'Min 6 characters').required('Password is required'),
             })}
@@ -45,7 +45,7 @@ function SignUp() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.name}
-                      className="border-b border-b-red-400 focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
+                      className="border-b border-b-red-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
                     />
                     {touched.name && errors.name && (
                       <p className="text-red-500 text-sm">{errors.name}</p>
@@ -60,7 +60,7 @@ function SignUp() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.email}
-                      className="border-b border-b-red-400 focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
+                      className="border-b border-b-red-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
                     />
                     {touched.email && errors.email && (
                       <p className="text-red-500 text-sm">{errors.email}</p>
@@ -75,7 +75,7 @@ function SignUp() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.password}
-                      className="border-b border-b-red-400 focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
+                      className="border-b border-b-red-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
                     />
                     {touched.password && errors.password && (
                       <p className="text-red-500 text-sm">{errors.password}</p>

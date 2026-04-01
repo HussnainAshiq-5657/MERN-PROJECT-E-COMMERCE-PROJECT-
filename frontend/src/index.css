@@ -1,1 +1,45 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/* Pagination dots */
+.mySwiper .swiper-pagination-bullet {
+  background-color: gray;
+  width: 8px;
+  height: 8px;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: red;
+}
+
+/* Move dots down */
+.mySwiper .swiper-pagination {
+  bottom: -5px !important;
+}
+
+/* Arrows styling */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: gray;
+  background-color: white;
+  padding: 15px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Move arrows horizontally */
+.mySwiper .swiper-button-next {
+  right: 10px !important;
+}
+
+.mySwiper .swiper-button-prev {
+  left: 10px !important;
+}
+
+/* Optional hover effect */
+.mySwiper .swiper-button-next:hover,
+.mySwiper .swiper-button-prev:hover {
+  background-color: red;
+  color: white;
+}

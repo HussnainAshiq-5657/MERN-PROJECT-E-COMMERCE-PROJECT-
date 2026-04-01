@@ -44,7 +44,7 @@ function Login() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.email}
-                      className="border-b border-b-red-400 focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
+                      className="border-b border-b-red-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
                     />
                     {touched.email && errors.email && (
                       <p className="text-red-500 text-sm">{errors.email}</p>
@@ -59,7 +59,7 @@ function Login() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.password}
-                      className="border-b border-b-red-400 focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
+                      className="border-b border-b-red-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 p-2 w-full"
                     />
                     {touched.password && errors.password && (
                       <p className="text-red-500 text-sm">{errors.password}</p>

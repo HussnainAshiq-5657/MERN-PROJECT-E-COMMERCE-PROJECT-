@@ -32,11 +32,11 @@ function SellerActivity() {
   ];
   return (
     <>
-      <div className="grid w-4/5 mx-auto my-25 gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ">
+      <div className="grid w-4/5 mx-auto my-25 gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ">
         {SellerService.map((services) => (
           <div
             key={services.id}
-            className="border-2 border-gray-300 rounded-lg px-6 py-4 cursor-pointer hover:text-white hover:bg-red-500"
+            className="border-2 border-gray-300 rounded-lg p-4 cursor-pointer hover:text-white hover:bg-red-500"
           >
             <div className="flex flex-col gap-4 justify-center items-center">
               <div className="bg-gray-400 p-4 rounded-full">
