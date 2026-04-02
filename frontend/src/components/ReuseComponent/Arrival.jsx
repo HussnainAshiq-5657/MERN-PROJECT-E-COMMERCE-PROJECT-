@@ -5,7 +5,7 @@ function Arrival({ text, category, className }) {
     <>
       <div className={`w-4/5 mx-auto flex justify-between items-end ${className}`}>
         <div className="flex flex-col gap-2">
-          <p className="text-red-500 font-bold text-md">{text}</p>
+          <p className="text-primary font-bold text-md">{text}</p>
           <h1 className="text-2xl font-bold">{category}</h1>
         </div>
         <div className="flex gap-2">

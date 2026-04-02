@@ -81,7 +81,7 @@ function SignUp() {
                       <p className="text-red-500 text-sm">{errors.password}</p>
                     )}
                   </div>
-                  <Button text={'Create Account'} className=" bg-red-500 hover:bg-red-700" />
+                  <Button text={'Create Account'} className=" bg-color" />
                   <Button
                     text={'Sign up with Google'}
                     className="bg-gray-500 hover:bg-gray-700 text-black"

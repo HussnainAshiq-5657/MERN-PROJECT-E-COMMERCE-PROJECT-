@@ -1,0 +1,23 @@
+@use 'sass:color';
+
+$primary: #db4444;
+$font-first: 'font-poppins';
+
+:hover.category {
+  background-color: $primary;
+}
+.bg-color {
+  background-color: $primary;
+
+  &:hover {
+    background-color: color.adjust($primary, $lightness: -10%);
+  }
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.font-primary {
+  font-family: $font-first;
+}

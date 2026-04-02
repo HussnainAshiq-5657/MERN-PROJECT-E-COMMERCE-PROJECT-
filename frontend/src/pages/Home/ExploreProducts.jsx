@@ -17,7 +17,7 @@ function ExploreProducts() {
       <Arrival text={"Our Products"} category={"Explore Our Products"} />
         <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 my-10">
         {cartSelector.length === 0 ? (
-            <p className="text-center font-bold text-3xl text-red-500">No Products Found</p>
+            <p className="text-center font-bold text-3xl bg-color">No Products Found</p>
         ) : (
             cartSelector.map((items) => (
             <div

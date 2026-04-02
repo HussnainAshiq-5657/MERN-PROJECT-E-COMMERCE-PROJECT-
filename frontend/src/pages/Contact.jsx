@@ -11,7 +11,7 @@ function Contact() {
         <div className="bg-white shadow-2xs shadow-gray-300 rounded-lg p-10 border-2 border-gray-300 w-2/5">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
-              <div className="bg-red-500 rounded-full p-2">
+              <div className="bg-color rounded-full p-2">
                 <IoCallOutline className="text-white text-xl cursor-pointer" />
               </div>
               <h1 className="font-semibold text-lg">Call To Us</h1>
@@ -24,7 +24,7 @@ function Contact() {
           <hr className="w-full my-5 h-0.5 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-200 border-0" />
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
-              <div className="bg-red-500 rounded-full p-2">
+              <div className="bg-color rounded-full p-2">
                 <MdOutlineEmail className="text-white text-xl cursor-pointer" />
               </div>
               <h1 className="font-semibold text-lg">Write To Us</h1>
@@ -129,7 +129,7 @@ function Contact() {
                     )}
                   </div>
                   <div className="flex justify-end">
-                    <Button text={'Send Message'} className="bg-red-500 hover:bg-red-700" />
+                    <Button text={'Send Message'} className="bg-color" />
                   </div>
                 </form>
               </div>

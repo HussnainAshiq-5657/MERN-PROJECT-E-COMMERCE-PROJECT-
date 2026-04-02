@@ -68,7 +68,7 @@ function Login() {
                   <div className="flex justify-between items-center">
                     <NavLink
                       to="/signUp"
-                      className="bg-red-500 hover:bg-red-700 text-white py-2 font-bold cursor-pointer px-4 rounded-lg"
+                      className="bg-color text-white py-2 font-bold cursor-pointer px-4 rounded-lg"
                     >
                       Log In
                     </NavLink>

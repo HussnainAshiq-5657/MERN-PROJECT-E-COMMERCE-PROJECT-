@@ -21,7 +21,7 @@ function CategorySection() {
         {categories.map((category) => (
           <div
             key={category.id}
-            className="flex flex-col items-center gap-4 w-40 p-8 bg-white rounded-2xl text-gray-700 not-first-of-type:border border-gray-200 shadow-sm  hover:bg-red-500 hover:text-white hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+            className="flex flex-col items-center gap-4 w-40 p-8 bg-white rounded-2xl text-gray-700 not-first-of-type:border border-gray-200 shadow-sm category hover:text-white hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer"
           >
             <div className="text-4xl">{category.icon}</div>
 
