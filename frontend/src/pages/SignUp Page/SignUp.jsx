@@ -1,7 +1,7 @@
 import * as yup from 'yup';
 import { Formik } from 'formik';
 import SignUpPagePhoto from '../../assets/SignUpPagePhoto.jpg';
-import Button from '../../components/button/button.jsx'
+import Button from '../../components/ReuseComponent/button.jsx'
 import { NavLink } from 'react-router';
 
 function SignUp() {

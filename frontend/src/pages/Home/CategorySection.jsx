@@ -3,6 +3,7 @@ import { FaComputer, FaHeadphones } from 'react-icons/fa6';
 import { MdOutlineWatch } from 'react-icons/md';
 import { CiCamera } from 'react-icons/ci';
 import { FaGamepad } from 'react-icons/fa6';
+import Arrival from '../../components/ReuseComponent/Arrival';
 
 function CategorySection() {
   const categories = [
@@ -15,7 +16,8 @@ function CategorySection() {
   ];
   return (
     <>
-      <div className="w-4/5 mx-auto flex flex-wrap gap-8 my-20 justify-center">
+      <Arrival text={"Categories"} category={"Browse By Category"} className="mt-10" />
+      <div className="w-4/5 mx-auto flex flex-wrap gap-8 my-10 justify-between">
         {categories.map((category) => (
           <div
             key={category.id}

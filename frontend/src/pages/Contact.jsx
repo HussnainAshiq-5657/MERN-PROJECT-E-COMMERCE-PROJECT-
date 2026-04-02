@@ -2,7 +2,7 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import { IoCallOutline } from 'react-icons/io5';
 import { MdOutlineEmail } from 'react-icons/md';
-import Button from '../components/button/button';
+import Button from '../components/ReuseComponent/button.jsx';
 
 function Contact() {
   return (

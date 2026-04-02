@@ -2,11 +2,13 @@ import PlayStation from '../../Images/PlayStation.png';
 import Women from '../../Images/Women.jpg';
 import Speaker from '../../Images/Speaker.png';
 import Gucci from '../../Images/Gucci.png';
+import Arrival from '../../components/ReuseComponent/Arrival';
 
 function NewArrival() {
   return (
     <>
-      <div className="w-4/5 mx-auto my-20 flex justify-center gap-10">
+      <Arrival text={"Featured"} category={"New Arrivals"}/>
+      <div className="w-4/5 mx-auto my-10 flex justify-between items-center">
         {/* PlayStation */}
         <div className="w-1/2 bg-black text-white p-10 rounded-xl">
           <div
