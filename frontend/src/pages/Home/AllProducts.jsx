@@ -2,10 +2,9 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../toolkit/ProductAPIs.js';
 import Button from '../../components/ReuseComponent/button.jsx';
-import Arrival from '../../components/ReuseComponent/Arrival.jsx';
 import Link from '../../components/ReuseComponent/Link.jsx';
 
-function ExploreProducts() {
+function AllProducts() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProducts());
@@ -15,12 +14,12 @@ function ExploreProducts() {
 
   return (
     <>
-      <Arrival text={'Our Products'} category={'Explore Our Products'} />
+      <h1 className='text-center my-10 text-primary text-4xl font-bold'>Our Products</h1>
       <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 my-10">
         {cartSelector.length === 0 ? (
-          <p className="font-bold text-center text-3xl text-primary">No Products Found</p>
+          <p className="font-bold text-3xl text-primary">No Products Found</p>
         ) : (
-          cartSelector.slice(0, 8).map((items) => (
+          cartSelector.map((items) => (
             <div
               key={items.id}
               className="flex flex-col gap-4 border border-gray-200 px-6 py-2 rounded-lg hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer"
@@ -47,9 +46,9 @@ function ExploreProducts() {
           ))
         )}
       </div>
-      <Link to="/allProducts" text={"View All Products"}/>
+      <Link to="/" text={"Back to Home"} className="my-5" />
     </>
   );
 }
 
-export default ExploreProducts;
+export default AllProducts;

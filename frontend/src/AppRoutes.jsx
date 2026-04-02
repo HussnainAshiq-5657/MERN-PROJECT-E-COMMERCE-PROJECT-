@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp Page/SignUp.jsx';
 import MainLayout from './layout/MainLayout';
 import NotFound from './pages/NotFound.jsx';
 import Login from './pages/SignUp Page/LoginUser.jsx';
+import AllProducts from './pages/Home/AllProducts.jsx';
 
 function AppRoutes() {
   return (
@@ -13,6 +14,7 @@ function AppRoutes() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/allProducts" element={<AllProducts />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signUp" element={<SignUp />} />
