@@ -6,7 +6,7 @@ function Link({to,text,className}) {
       <div className='flex justify-center mt-10 mb-5'>
         <NavLink
           to={to}
-          className={`font-semibold w-fit bg-color px-4 py-2 text-white rounded-2xl ${className}`}
+          className={`font-semibold w-fit bg-color px-4 py-2 text-white rounded-2xl transition duration-300 hover:scale-110 ${className}`}
         >
           {text}
         </NavLink>
